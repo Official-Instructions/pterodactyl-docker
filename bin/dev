@@ -15,4 +15,4 @@ export DAEMON_VERSION
 export SFTP_VERSION
 
 # Just pass everything to compose
-docker-compose -f docker-compose.yml -f ./manifest/docker-compose.dev.yml $@
+#docker-compose -f docker-compose.yml -f ./manifest/docker-compose.dev.yml $@

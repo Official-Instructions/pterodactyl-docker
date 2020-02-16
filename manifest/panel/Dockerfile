@@ -1,11 +1,13 @@
 FROM alpine:edge
 
+MAINTAINER Official Instructions <official.instructions.email@gmail.com>
+#Forked From
 MAINTAINER Cameron Carney <ccarney16@live.com>
 
 ARG VERSION
 
 ENV STARTUP_TIMEOUT=5 \
-    PANEL_VERSION=${VERSION}
+    PANEL_VERSION=
 
 WORKDIR /var/www/html
 
