@@ -2,7 +2,7 @@ FROM alpine:latest
 
 ARG VERSION
 
-ENV SFTP_VERSION=${VERSION} \
+ENV SFTP_VERSION="v1.0.4" \
     UID=500
 
 RUN mkdir /srv/daemon -p; \
