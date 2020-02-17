@@ -30,6 +30,7 @@ RUN \
  && chown nginx:nginx * -R
 
 COPY ./ /
+COPY entrypoint.sh /usr/local/bin/
 
 VOLUME [ "/data" ]
 
