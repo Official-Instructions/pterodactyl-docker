@@ -15,6 +15,7 @@ RUN \
  && tar --strip-components=1 -xzvf daemon.tar.gz \
  && rm -f daemon.tar.gz \
  && npm install --production \
+ && npm install --save node_extra_ca_certs_mozilla_bundle \
  && addgroup -S -g ${UID} pterodactyl && adduser -S -D -H -G pterodactyl -u ${UID} -s /bin/false pterodactyl \
  && apk del curl make gcc g++ python gnupg \
  && rm -rf /root/.npm /root/.node-gyp /root/.gnupg \
@@ -22,4 +23,4 @@ RUN \
 
 EXPOSE 8080
 
-CMD [ "npm", "start" ]
+CMD [ "NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem", "npm", "start" ]
