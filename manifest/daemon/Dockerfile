@@ -5,7 +5,8 @@ MAINTAINER Cameron Carney <ccarney16@live.com>
 ARG VERSION
 
 ENV DAEMON_VERSION="v0.6.12" \
-    UID=500
+    UID=500 \
+    NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem \
 
 WORKDIR /srv/daemon
 
@@ -23,4 +24,4 @@ RUN \
 
 EXPOSE 8080
 
-CMD [ "NODE_EXTRA_CA_CERTS=node_modules/node_extra_ca_certs_mozilla_bundle/ca_bundle/ca_intermediate_root_bundle.pem", "npm", "start" ]
+CMD [ "npm", "start" ]
