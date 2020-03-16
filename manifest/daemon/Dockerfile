@@ -4,7 +4,7 @@ MAINTAINER Official Instructions <official.instructions.email@gmail.com>
 
 ARG VERSION
 
-ENV DAEMON_VERSION="v0.6.12" \
+ENV DAEMON_VERSION="v0.6.13" \
     UID=500
 
 WORKDIR /srv/daemon
